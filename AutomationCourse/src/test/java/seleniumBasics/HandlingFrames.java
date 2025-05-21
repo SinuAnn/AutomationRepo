@@ -14,7 +14,7 @@ public class HandlingFrames  extends Base
 	driver.navigate().to("https://demoqa.com/frames");
 	List<WebElement>totalframes= driver.findElements(By.tagName("iframe"));
 	System.out.println(totalframes.size());
-	//WebElement tframes=driver.findElement(By.xpath("//iframe[@id='frame1']"));
+	WebElement tframes=driver.findElement(By.xpath("//iframe[@id='frame1']"));
 	driver.switchTo().frame(tframes);
 	//WebElement t1frames=driver.findElement(By.xpath("//iframe[@id='frame2']"));
 			//driver.switchTo().frame(t1frames);
