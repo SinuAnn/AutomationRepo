@@ -26,6 +26,7 @@ public class HandlingFileUpload extends Base {
 		driver.navigate().to("https://www.ilovepdf.com/pdf_to_word");
 	WebElement uploads=driver.findElement(By.xpath("//a[@id='pickfiles']"));
 	uploads.click();
+
 StringSelection selection =new StringSelection("C:\\Users\\DELL\\git\\AutomationRepo\\AutomationCourse\\src\\main\\resources\\1.pdf");
 	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
 	Robot robot=new Robot();
@@ -44,13 +45,13 @@ StringSelection selection =new StringSelection("C:\\Users\\DELL\\git\\Automation
 
 		HandlingFileUpload upload= new HandlingFileUpload();
 		upload.initializeBrower();
-		//upload.verifyuploadingusingsendkeys();
-		try {
-			upload.verifyuplodigusingrobotclass();
-		} catch (AWTException e) {
+		upload.verifyuploadingusingsendkeys();
+		/*try {
+			//upload.verifyuplodigusingrobotclass();
+		//} catch (AWTException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			//e.printStackTrace();
+		}*/
 		//upload.browserCloseandQuit();
 		
 	}
