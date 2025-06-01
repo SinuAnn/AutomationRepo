@@ -1,0 +1,68 @@
+package testscript;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+import automationcore.Base;
+import pages.LoginPage;
+import utilities.ExcelUtility;
+
+
+public class LoginTest extends Base 
+{
+@Test
+	public void verify_UserLoginwithValidCredentials() throws IOException 
+	{
+	String username=ExcelUtility.getStringData(0, 0, "LoginPage");
+	String password=ExcelUtility.getStringData(0, 1, "LoginPage");
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.enterUsernameonUsernameField(username);
+	loginPage.enterPasswordOnPasswordField(password);
+	loginPage.clickOnRemembermeCheckbox();
+	loginPage.clickOnSignInButton();
+	
+	}
+@Test
+public void verifyUserLoginwith_InValidUsernameandvalidpassword() throws IOException
+
+{
+	
+	String username=ExcelUtility.getStringData(1, 0, "LoginPage");
+	String password=ExcelUtility.getStringData(1, 1, "LoginPage");
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.enterUsernameonUsernameField(username);
+	loginPage.enterPasswordOnPasswordField(password);
+	loginPage.clickOnRemembermeCheckbox();
+	loginPage.clickOnSignInButton();
+}
+
+@Test
+public void verifyUserLoginwith_ValidUsernameandInValidPassword() throws IOException 
+{
+	String username=ExcelUtility.getStringData(2, 0, "LoginPage");
+	String password=ExcelUtility.getStringData(2, 1, "LoginPage");
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.enterUsernameonUsernameField(username);
+	loginPage.enterPasswordOnPasswordField(password);
+	loginPage.clickOnRemembermeCheckbox();
+	loginPage.clickOnSignInButton();
+}
+@Test
+public void verifyUserLoginwith_InValidCredentials() throws IOException 
+{
+	
+	String username=ExcelUtility.getStringData(3, 0, "LoginPage");
+	String password=ExcelUtility.getStringData(3, 1, "LoginPage");
+	LoginPage loginPage=new LoginPage(driver);
+	loginPage.enterUsernameonUsernameField(username);
+	loginPage.enterPasswordOnPasswordField(password);
+	loginPage.clickOnRemembermeCheckbox();
+	loginPage.clickOnSignInButton();
+}
+
+}
+
+
+
