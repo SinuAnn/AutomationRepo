@@ -18,28 +18,28 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']") private WebElement managecategorylink;
-	@FindBy(xpath = "//a[@onclick=\"click_button(1)\"]")
+	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	WebElement newcategoryaddicon;
 	@FindBy(xpath = "//input[@id='category'and@class='form-control']")private
 	WebElement newcategoryfield;
 	
 	@FindBy(xpath="//span[text()='discount']") private WebElement
 	 discount;
-	@FindBy(xpath = "//input[@name=\"main_img\"]")private
+	@FindBy(xpath = "//input[@name='main_img']")private
 	WebElement newcategoryfileuploadlink;
-	@FindBy(xpath = "//input[@name=\"top_menu\"and@value=\"yes\"]")private
+	@FindBy(xpath = "//input[@name='top_menu'and@value='yes']")private
 	WebElement showontopmenuradiobutton;
-	@FindBy(xpath = "//input[@name=\"show_home\"and@value=\"yes\"] ")private
+	@FindBy(xpath = "//input[@name='show_home'and@value='yes'] ")private
 	WebElement showonleftmenuradiobutton;
 	@FindBy(xpath = "//button[text()='Save']")private
 	WebElement newcategorysavebutton;
-	@FindBy(xpath = "//a[@onclick=\"click_button(2)\"]")private
+	@FindBy(xpath = "//a[@onclick='click_button(2)']")private
 	WebElement categorysearchlink;
-	@FindBy(xpath = "//input[@name=\"un\"]")private
+	@FindBy(xpath = "//input[@name='un']")private
 	WebElement categorynamesearchfield;
-	@FindBy(xpath = "//button[@value=\"sr\"]")private
+	@FindBy(xpath = "//button[@value='sr']")private
 	WebElement categorysearchbutton;
-	@FindBy(xpath = "//a[@class=\"btn btn-rounded btn-warning\"]")private
+	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")private
 	WebElement categryresetlink;
 	
 public void clickOnManageCategoryLink()

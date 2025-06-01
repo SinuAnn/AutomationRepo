@@ -15,21 +15,21 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = ("//a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-news\"and@class=\"small-box-footer\"]"))
+	@FindBy(xpath = ("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and@class='small-box-footer']"))
 	private WebElement manageNewsLink;
-	@FindBy(xpath = "//a[@onclick=\"click_button(1)\"]")
+	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	WebElement newmanagenewsicon;
 	@FindBy(xpath = "//textarea[@id='news'and@class='form-control']")
 	WebElement newmanagenewsfield;
-	@FindBy(xpath = "//button[@type=\"submit\"]")
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement newmanagenewssaveicon;
-	@FindBy(xpath = "//a[@onclick=\"click_button(2)\"]")
+	@FindBy(xpath = "//a[@onclick='click_button(2)']")
 	WebElement managenewssearchicon;
-	@FindBy(xpath = "//input[@name=\"un\"]")
+	@FindBy(xpath = "//input[@name='un']")
 	WebElement managenewssearchfield;
-	@FindBy(xpath = "//button[@type=\"submit\"]")
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement managenewssearchbutton;
-	@FindBy(xpath = "//a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-news\"and@class=\"btn btn-rounded btn-warning\"]")
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and@class='btn btn-rounded btn-warning']")
 	WebElement manangenewsreseticon;
 
 	public void clickOnManageNewsLink() {
