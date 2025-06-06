@@ -28,7 +28,7 @@ public class ManageNewsTest extends Base {
 		managenews.clickOnNewnewsSaveIcon();
 	}
 
-	@Test(description = "Verify wheather user is able to search news in Managenews tile")
+	@Test(description = "Verify wheather user is able to search news and reset in Managenews tile")
 	public void verifywhetherUserCanSearchNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");

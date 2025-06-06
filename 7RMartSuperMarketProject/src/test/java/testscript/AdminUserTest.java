@@ -57,7 +57,7 @@ public class AdminUserTest extends Base {
 		adminuser.clickOnSearchButtonOfSearchAdminUsers();
 	}
 
-	@Test(description = "Verify wheather user is able to serach  adminuser tile using usertype")
+	@Test(description = "Verify wheather user is able to serach and rest adminuser tile using usertype ")
 	public void verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
