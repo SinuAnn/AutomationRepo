@@ -38,22 +38,25 @@ StringSelection selection =new StringSelection("C:\\Users\\DELL\\git\\Automation
 	robot.keyRelease(KeyEvent.VK_CONTROL);
 	robot.keyRelease(KeyEvent.VK_V);
 	robot.keyPress (KeyEvent.VK_ENTER);
-	robot.keyRelease(KeyEvent.VK_ENTER);
+robot.keyRelease(KeyEvent.VK_ENTER);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		HandlingFileUpload upload= new HandlingFileUpload();
 		upload.initializeBrower();
-		upload.verifyuploadingusingsendkeys();
-		/*try {
-			//upload.verifyuplodigusingrobotclass();
-		//} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-		}*/
+		//upload.verifyuploadingusingsendkeys();
+		 {
+			try {
+				upload.verifyuplodigusingrobotclass();
+			} catch (AWTException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} 
+		}
 		//upload.browserCloseandQuit();
 		
 	}
 
-}
+

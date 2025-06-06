@@ -13,8 +13,8 @@ public class HandlingMouseAction extends Base
 	public void verifyRightclick()
 	{ 
 	WebElement home =driver.findElement(By.xpath("//a[text()='Home']"));
-	 Actions actions= new Actions(driver);
-	 actions.contextClick(home).build().perform();
+	 Actions actions= new Actions(driver);//Actions is a predefined class
+	 actions.contextClick(home).build().perform();//contextclick is used for right click functions
 	 
 }
 	public void verifyMouseOver()

@@ -2,24 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-01T23:15:30 IST" name="Default suite" finished-at="2025-06-01T23:15:47 IST" duration-ms="17130">
+  <suite started-at="2025-06-05T23:15:18 IST" name="Default suite" finished-at="2025-06-05T23:15:30 IST" duration-ms="11821">
     <groups>
     </groups>
-    <test started-at="2025-06-01T23:15:30 IST" name="Default test" finished-at="2025-06-01T23:15:47 IST" duration-ms="17130">
-      <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initializeBrower()[pri:0, instance:testscript.ManageNewsTest@2a4fb17b]" started-at="2025-06-01T23:15:30 IST" name="initializeBrower" finished-at="2025-06-01T23:15:40 IST" duration-ms="10506" status="PASS">
+    <test started-at="2025-06-05T23:15:18 IST" name="Default test" finished-at="2025-06-05T23:15:30 IST" duration-ms="11821">
+      <class name="testscript.ManageCategoryTest">
+        <test-method is-config="true" signature="initializeBrower()[pri:0, instance:testscript.ManageCategoryTest@48f2bd5b]" started-at="2025-06-05T23:15:18 IST" name="initializeBrower" finished-at="2025-06-05T23:15:24 IST" duration-ms="5618" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrower -->
-        <test-method signature="verifywhetherUserCanSearchNews()[pri:0, instance:testscript.ManageNewsTest@2a4fb17b]" started-at="2025-06-01T23:15:40 IST" name="verifywhetherUserCanSearchNews" finished-at="2025-06-01T23:15:47 IST" duration-ms="6542" status="PASS">
+        <test-method signature="verifyWhetherTheUserCanEnterTheNewCategoryDetails()[pri:0, instance:testscript.ManageCategoryTest@48f2bd5b]" started-at="2025-06-05T23:15:24 IST" name="verifyWhetherTheUserCanEnterTheNewCategoryDetails" finished-at="2025-06-05T23:15:29 IST" duration-ms="5593" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifywhetherUserCanSearchNews -->
-        <test-method is-config="true" signature="browserCloseandQuit()[pri:0, instance:testscript.ManageNewsTest@2a4fb17b]" started-at="2025-06-01T23:15:47 IST" name="browserCloseandQuit" finished-at="2025-06-01T23:15:47 IST" duration-ms="6" status="PASS">
+        </test-method> <!-- verifyWhetherTheUserCanEnterTheNewCategoryDetails -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTest@48f2bd5b]" started-at="2025-06-05T23:15:29 IST" name="driverQuit" finished-at="2025-06-05T23:15:30 IST" duration-ms="504" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyWhetherTheUserCanEnterTheNewCategoryDetails status=SUCCESS method=ManageCategoryTest.verifyWhetherTheUserCanEnterTheNewCategoryDetails()[pri:0, instance:testscript.ManageCategoryTest@48f2bd5b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserCloseandQuit -->
-      </class> <!-- testscript.ManageNewsTest -->
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testscript.ManageCategoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

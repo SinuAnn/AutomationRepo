@@ -10,17 +10,8 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
-	@Test
-	public void verifyWhethertheUsercannavigatetoManageNewspage() throws IOException {
-		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
-		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
-		LoginPage loginpage = new LoginPage(driver);
-		loginpage.enterUsernameonUsernameField(username);
-		loginpage.enterPasswordOnPasswordField(password);
-		loginpage.clickOnSignInButton();
-		ManageNewsPage managenews = new ManageNewsPage(driver);
-		managenews.clickOnManageNewsLink();
-	}@Test
+	
+	@Test(description="Verifying user is able to add new news in Managenews tile")
 	public void verifyWhethertheUsercanaddNewNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -36,7 +27,7 @@ public class ManageNewsTest extends Base {
 		managenews.clickOnNewnewsSaveIcon();
 	}
 
-	@Test
+	@Test(description="Verifying user is able to search  newly added news in Managenews tile")
 	public void verifywhetherUserCanSearchNews() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");

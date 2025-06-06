@@ -7,7 +7,7 @@
         <methods>
           <include name="verifyWhetherTheUserCanEnterTheNewCategoryDetails"/>
           <include name="initializeBrower"/>
-          <include name="browserCloseandQuit"/>
+          <include name="driverQuit"/>
         </methods>
       </class> <!-- testscript.ManageCategoryTest -->
     </classes>

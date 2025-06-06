@@ -8,15 +8,19 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+
+import constants.Constant;
+
 public class ExcelUtility {
 
+	
 	static FileInputStream f;
 	static XSSFWorkbook w;
 	static XSSFSheet sh;
 
 	public static String getStringData(int a, int b, String sheet) throws IOException {
-		f = new FileInputStream(
-				"C:\\Users\\DELL\\git\\AutomationRepo\\7RMartSuperMarketProject\\src\\test\\resources\\TestData.xlsx");																																																								// data.
+		f = new FileInputStream(Constant.TESTDATAFILE);
+																																																											// data.
 		w = new XSSFWorkbook(f);// to access or modify the data.
 		sh = w.getSheet(sheet);
 		XSSFRow r = sh.getRow(a);// get the row value from sheet
@@ -25,7 +29,7 @@ public class ExcelUtility {
 	}
 
 	public static String getIntegerData(int a, int b, String sheet) throws IOException {
-		f = new FileInputStream("C:\\Users\\DELL\\git\\AutomationRepo\\7RMartSuperMarketProject\\src\\test\\resources\\TestData.xlsx");
+		f = new FileInputStream(Constant.TESTDATAFILE);
 		
 		
 		w = new XSSFWorkbook(f);

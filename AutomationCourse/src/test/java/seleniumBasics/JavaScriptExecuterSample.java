@@ -10,10 +10,12 @@ public class JavaScriptExecuterSample extends Base
 {
 public void verifyjavascriptexecuter()
 {driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
-	WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
+	//WebElement showMessageButton=driver.findElement(By.xpath("//button[@id='button-one']"));
+WebElement getTotalButton=driver.findElement(By.xpath("//button[@id='button-two']"));
 	JavascriptExecutor js = (JavascriptExecutor)driver;
-	js.executeScript("arguments[0].click();", showMessageButton);
-js.executeScript("window.scrollBy(0,350)", ""); //down
+	//js.executeScript("arguments[0].click();", showMessageButton);
+	js.executeScript("arguments[0].click();", getTotalButton);
+//js.executeScript("window.scrollBy(0,350)", ""); //down
 //js.executeScript("window.scrollBy(0,-350)", ""); //Scrollup
 }
 	public static void main(String[] args) {
@@ -21,7 +23,7 @@ js.executeScript("window.scrollBy(0,350)", ""); //down
 
 		JavaScriptExecuterSample script = new JavaScriptExecuterSample();
 		script.initializeBrower();
-		script.browserCloseandQuit();
+		//script.browserCloseandQuit();
 		script.verifyjavascriptexecuter();
 	}
 

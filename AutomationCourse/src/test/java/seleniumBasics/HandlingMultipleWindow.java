@@ -12,8 +12,8 @@ public class HandlingMultipleWindow extends Base
 public void multiplewindow()
 {
 	driver.navigate().to("https://demo.guru99.com/popup.php"); 
-		String firstwindoehandleid=driver.getWindowHandle(); 
-		System.out.println(firstwindoehandleid); 
+		String firstwindowhandleid=driver.getWindowHandle(); 
+		System.out.println(firstwindowhandleid); 
 		WebElement handle=driver.findElement(By.xpath("//a[text()='Click Here']")); 
 		handle.click(); 
 		Set<String>handleids=driver.getWindowHandles(); //to handle multiple windows
@@ -22,7 +22,7 @@ public void multiplewindow()
 		while(values.hasNext()) 
 		{ 
 			String currentid=values.next(); 
-			if(!currentid.equals(firstwindoehandleid)) 
+			if(!currentid.equals(firstwindowhandleid)) 
 			{
 driver.switchTo().window(currentid); 
 WebElement emailid=driver.findElement(By.xpath("//input[@name='emailid']")); 

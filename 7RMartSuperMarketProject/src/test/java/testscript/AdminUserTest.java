@@ -12,10 +12,11 @@ import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUserTest extends Base {
 
-	@Test
+	@Test(description="Verifying user is able to add new adminuser in adminusertile" )
 	public void verifywhetheruserisabletoaddnewadminuseronadminusertile() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -30,8 +31,11 @@ public class AdminUserTest extends Base {
 		AdminUserPage adminuser = new AdminUserPage(driver);
 		adminuser.clickOnAdminUserLink();
 		adminuser.clickOnNewIcon();
-		String adminusername = ExcelUtility.getStringData(0, 0, "AdminUserPage");
-		String adminpassword = ExcelUtility.getStringData(0, 1, "AdminUserPage");
+		FakerUtility fackerutility =new FakerUtility();
+		String adminusername=fackerutility.createRandomUsername();
+		String adminpassword=fackerutility.createRandomPassword();
+		//String adminusername = ExcelUtility.getStringData(0, 0, "AdminUserPage");
+		//String adminpassword = ExcelUtility.getStringData(0, 1, "AdminUserPage");
 		adminuser.enterUsernameOnUsernameField(adminusername);
 		adminuser.enterPasswordOnPasswordField(adminpassword);
 		adminuser.selectUserTypeFromUserTypeDropDownList();
@@ -39,7 +43,7 @@ public class AdminUserTest extends Base {
 
 	}
 
-	@Test
+	@Test(description="Verifying user is able to serach  newly added admin in adminuser tile using username")
 	public void verifywhetheruserisabletosearchadminusersfromadminusertileusingusername() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -55,12 +59,14 @@ public class AdminUserTest extends Base {
 		adminuser.clickOnAdminUserLink();
 		//adminuser.clickonnewicon();
 		adminuser.clickOnSearchButton();
+		//FakerUtility fackerutility =new FakerUtility();
+		//String adminusername=fackerutility.createRandomSearch();
 		String adminusername = ExcelUtility.getStringData(0, 0, "AdminUserPage");
 		adminuser.enterUsernameOnUsernameFieldOfSearchButton(adminusername);
 		adminuser.clickOnSearchButtonOfSearchAdminUsers();
 	}
 
-	@Test
+	@Test(description="Verifying user is able to serach  newly added admin in adminuser tile using usertype")
 	public void verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
@@ -81,7 +87,7 @@ public class AdminUserTest extends Base {
 
 	}
 
-	@Test
+	@Test(description="Verifying user is able to reset the  adminuser tile")
 
 	public void verifyWhetheruserisabletoresetadminuserdetails() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");

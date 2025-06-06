@@ -25,7 +25,7 @@ public class HandlingFrames  extends Base
 	WebElement frame2=driver.findElement(By.xpath("//iframe[@id='frame2']"));
 	driver.switchTo().frame(frame2);
 	WebElement heading =driver.findElement(By.xpath("//h1[text()='This is a sample page']"));
-	System.out.println("h2");
+	//System.out.println("h2");
 	System.out.println(heading.getText());
 	}
 	
