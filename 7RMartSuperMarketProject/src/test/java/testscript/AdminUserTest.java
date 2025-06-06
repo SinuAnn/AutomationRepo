@@ -17,7 +17,7 @@ import utilities.FakerUtility;
 public class AdminUserTest extends Base {
 
 	@Test(description="Verifying user is able to add new adminuser in adminusertile" )
-	public void verifywhetheruserisabletoaddnewadminuseronadminusertile() throws IOException {
+	public void verifyWhetherUserIsAbleToAddNewAdminUserOnAdminUserTile() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);

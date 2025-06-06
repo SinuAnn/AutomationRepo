@@ -23,8 +23,7 @@ public class ManageCategoryTest extends Base {
 		ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
 		managecategorypage.clickOnManageCategoryLink();
 		managecategorypage.clickOnNewCategoryAddIcon();
-		// String category = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
-		String category = ExcelUtility.getStringData(2, 0, "ManageCategoryPage");
+		String category = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
 		managecategorypage.enterNewnameOnCategoryField(category);
 		managecategorypage.clickOnSelectGroupstoSelectGroup();
 		managecategorypage.toPageScrolldown();
