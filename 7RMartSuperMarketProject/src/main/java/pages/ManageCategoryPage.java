@@ -70,7 +70,6 @@ public class ManageCategoryPage {
 	public void clickOnTheFileUploadLink() throws AWTException {
 
 		newcategoryfileuploadlink.sendKeys(Constant.IMAGEDATAFILE);
-				
 
 	}
 
@@ -85,8 +84,8 @@ public class ManageCategoryPage {
 	}
 
 	public void clickonTheNewCategorySaveButton() {
-		//newcategorysavebutton.click();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
+		// newcategorysavebutton.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", newcategorysavebutton);
 	}
 

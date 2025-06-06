@@ -4,23 +4,21 @@ import com.github.javafaker.Faker;
 
 public class FakerUtility {
 
-	Faker faker =new Faker();
-	
-	public String createRandomUsername()
-	{
+	Faker faker = new Faker();
+
+	public String createRandomUsername() {
 		return faker.name().username();
 	}
-	
-	public String createRandomPassword()
-	{
+
+	public String createRandomPassword() {
 		return faker.internet().password();
 	}
-	public String createRandomEmail()
-	{
+
+	public String createRandomEmail() {
 		return faker.name().fullName();
 	}
-	public String createRandomSearch()
-	{
+
+	public String createRandomSearch() {
 		return faker.name().lastName();
 	}
 }

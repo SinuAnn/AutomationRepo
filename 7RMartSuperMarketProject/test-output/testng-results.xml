@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-06T11:29:53 IST" name="Default suite" finished-at="2025-06-06T11:30:10 IST" duration-ms="16980">
+  <suite started-at="2025-06-06T12:03:01 IST" name="Default suite" finished-at="2025-06-06T12:03:17 IST" duration-ms="15554">
     <groups>
     </groups>
-    <test started-at="2025-06-06T11:29:53 IST" name="Default test" finished-at="2025-06-06T11:30:10 IST" duration-ms="16980">
-      <class name="testscript.ManageCategoryTest">
-        <test-method is-config="true" signature="initializeBrower()[pri:0, instance:testscript.ManageCategoryTest@7cc0cdad]" started-at="2025-06-06T11:29:53 IST" name="initializeBrower" finished-at="2025-06-06T11:30:03 IST" duration-ms="9767" status="PASS">
+    <test started-at="2025-06-06T12:03:01 IST" name="Default test" finished-at="2025-06-06T12:03:17 IST" duration-ms="15554">
+      <class name="testscript.AdminUserTest">
+        <test-method is-config="true" signature="initializeBrower()[pri:0, instance:testscript.AdminUserTest@7c7b252e]" started-at="2025-06-06T12:03:02 IST" name="initializeBrower" finished-at="2025-06-06T12:03:11 IST" duration-ms="8999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrower -->
-        <test-method signature="verifyWhetherTheUserCanEnterTheNewCategoryDetails()[pri:0, instance:testscript.ManageCategoryTest@7cc0cdad]" started-at="2025-06-06T11:30:03 IST" name="verifyWhetherTheUserCanEnterTheNewCategoryDetails" description="Verifying user is able to add new categeory details in Managecategory tile" finished-at="2025-06-06T11:30:09 IST" duration-ms="6602" status="PASS">
+        <test-method signature="verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype()[pri:0, instance:testscript.AdminUserTest@7c7b252e]" started-at="2025-06-06T12:03:11 IST" name="verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype" description="Verifying user is able to serach  newly added admin in adminuser tile using usertype" finished-at="2025-06-06T12:03:17 IST" duration-ms="6013" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWhetherTheUserCanEnterTheNewCategoryDetails -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageCategoryTest@7cc0cdad]" started-at="2025-06-06T11:30:09 IST" name="driverQuit" finished-at="2025-06-06T11:30:10 IST" duration-ms="507" status="PASS">
+        </test-method> <!-- verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testscript.AdminUserTest@7c7b252e]" started-at="2025-06-06T12:03:17 IST" name="driverQuit" finished-at="2025-06-06T12:03:17 IST" duration-ms="452" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherTheUserCanEnterTheNewCategoryDetails status=SUCCESS method=ManageCategoryTest.verifyWhetherTheUserCanEnterTheNewCategoryDetails()[pri:0, instance:testscript.ManageCategoryTest@7cc0cdad] output={null}]]]>
+                <![CDATA[[TestResult name=verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype status=SUCCESS method=AdminUserTest.verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype()[pri:0, instance:testscript.AdminUserTest@7c7b252e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverQuit -->
-      </class> <!-- testscript.ManageCategoryTest -->
+      </class> <!-- testscript.AdminUserTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

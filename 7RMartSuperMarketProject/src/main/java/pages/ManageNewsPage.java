@@ -64,4 +64,3 @@ public class ManageNewsPage {
 		manangenewsreseticon.click();
 	}
 }
-
