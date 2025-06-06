@@ -1,7 +1,5 @@
 package testscript;
 
-
-
 import java.awt.AWTException;
 import java.io.IOException;
 
@@ -14,44 +12,43 @@ import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends Base {
 
+	@Test(description = "Verifying user is able to add new categeory details in Managecategory tile")
+	public void verifyWhetherTheUserCanEnterTheNewCategoryDetails() throws IOException, AWTException {
+		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
+		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.enterUsernameonUsernameField(username);
+		loginpage.enterPasswordOnPasswordField(password);
+		loginpage.clickOnSignInButton();
+		ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
+		managecategorypage.clickOnManageCategoryLink();
+		managecategorypage.clickOnNewCategoryAddIcon();
+		// String category = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
+		String category = ExcelUtility.getStringData(2, 0, "ManageCategoryPage");
+		managecategorypage.enterNewnameOnCategoryField(category);
+		managecategorypage.clickOnSelectGroupstoSelectGroup();
+		managecategorypage.toPageScrolldown();
+		 managecategorypage.clickOnTheFileUploadLink();
+		managecategorypage.clickOnTheShowOnTopMenuAndShowOnLeftMenuRadioButton();
+		managecategorypage.toPageScrolldown();
+		managecategorypage.clickonTheNewCategorySaveButton();
+	}
 
-
-@Test(description="Verifying user is able to add new categeory details in Managecategory tile")
-public void verifyWhetherTheUserCanEnterTheNewCategoryDetails() throws IOException, AWTException {
-	String username = ExcelUtility.getStringData(0, 0, "LoginPage");
-	String password = ExcelUtility.getStringData(0, 1, "LoginPage");
-	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUsernameonUsernameField(username);
-	loginpage.enterPasswordOnPasswordField(password);
-	loginpage.clickOnSignInButton();
-	ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
-	managecategorypage.clickOnManageCategoryLink();
-	managecategorypage.clickOnNewCategoryAddIcon();
-	//String category = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
-	String category = ExcelUtility.getStringData(2, 0, "ManageCategoryPage");
-	managecategorypage.enterNewnameOnCategoryField(category);
-	managecategorypage.clickOnSelectGroupstoSelectGroup();
-	//managecategorypage.clickOnTheFileUploadLink();
-	managecategorypage.clickOnTheShowOnTopMenuAndShowOnLeftMenuRadioButton();
-	managecategorypage.toPageScrolldown();
-	managecategorypage.clickonTheNewCategorySaveButton();
-}
-
-@Test(description="Verifying user is able to search  newlyadded categeory details in Managecategory tile")
-public void verifywhetherUsercanSearchTheCategoryDetails() throws IOException {
-	String username = ExcelUtility.getStringData(0, 0, "LoginPage");
-	String password = ExcelUtility.getStringData(0, 1, "LoginPage");
-	LoginPage loginpage = new LoginPage(driver);
-	loginpage.enterUsernameonUsernameField(username);
-	loginpage.enterPasswordOnPasswordField(password);
-	loginpage.clickOnSignInButton();
-	ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
-	managecategorypage.clickOnManageCategoryLink();
-	managecategorypage.clickonCategorySearchIcon();
-	String newcategorysearchname = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
-	managecategorypage.enterCategoryNameOnCategorySearchField(newcategorysearchname);
-	managecategorypage.clickOnCategorySearchButton();
-	managecategorypage.categryResetLink();
-}
+	@Test(description = "Verifying user is able to search  newlyadded categeory details in Managecategory tile")
+	public void verifywhetherUsercanSearchTheCategoryDetails() throws IOException {
+		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
+		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
+		LoginPage loginpage = new LoginPage(driver);
+		loginpage.enterUsernameonUsernameField(username);
+		loginpage.enterPasswordOnPasswordField(password);
+		loginpage.clickOnSignInButton();
+		ManageCategoryPage managecategorypage = new ManageCategoryPage(driver);
+		managecategorypage.clickOnManageCategoryLink();
+		managecategorypage.clickonCategorySearchIcon();
+		String newcategorysearchname = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
+		managecategorypage.enterCategoryNameOnCategorySearchField(newcategorysearchname);
+		managecategorypage.clickOnCategorySearchButton();
+		managecategorypage.categryResetLink();
+	}
 
 }
