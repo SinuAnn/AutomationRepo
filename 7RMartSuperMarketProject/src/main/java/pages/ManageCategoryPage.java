@@ -35,9 +35,9 @@ public class ManageCategoryPage {
 	@FindBy(xpath = "//input[@name='main_img']")
 	private WebElement newcategoryfileuploadlink;
 	@FindBy(xpath = "//input[@name='top_menu'and@value='no']")
-	private WebElement showontopmenuradiobutton;
+	private WebElement checkboxmenu1;
 	@FindBy(xpath = "//input[@name='show_home'and@value='no'] ")
-	private WebElement showonleftmenuradiobutton;
+	private WebElement checkboxmenu2;
 	@FindBy(xpath = "//button[text()='Save'and @type='submit']")
 	private WebElement newcategorysavebutton;
 	@FindBy(xpath = "//a[@onclick='click_button(2)']")
@@ -48,6 +48,8 @@ public class ManageCategoryPage {
 	private WebElement categorysearchbutton;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
 	private WebElement categryresetlink;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement addcategoryalert;
+@FindBy(xpath="//h4[text()='Search List Categories']")private WebElement searchlist;
 
 	public void clickOnManageCategoryLink() {
 		managecategorylink.click();
@@ -73,9 +75,9 @@ public class ManageCategoryPage {
 
 	}
 
-	public void clickOnTheShowOnTopMenuAndShowOnLeftMenuRadioButton() {
-		showontopmenuradiobutton.click();
-		showonleftmenuradiobutton.click();
+	public void clickOnCheckBoxRadioButton() {
+		checkboxmenu1.click();
+		checkboxmenu2.click();
 	}
 
 	public void toPageScrolldown() {
@@ -103,5 +105,13 @@ public class ManageCategoryPage {
 
 	public void categryResetLink() {
 		categryresetlink.click();
+	}
+	public boolean addcategoryalertdisplayed()
+	{
+		return addcategoryalert.isDisplayed();
+}
+	public boolean serachlistcategory()
+	{
+		return searchlist.isDisplayed();
 	}
 }

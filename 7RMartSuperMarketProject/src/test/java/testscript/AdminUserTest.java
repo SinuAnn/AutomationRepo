@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
@@ -37,6 +38,8 @@ public class AdminUserTest extends Base {
 		// String adminpassword = ExcelUtility.getStringData(0, 1, "AdminUserPage");
 		adminuser.selectUserTypeFromUserTypeDropDownList();
 		adminuser.clickOnSaveButton();
+		boolean isadminuseralertdisplayed=adminuser.adminuseralertdisplayed();
+	Assert.assertTrue(isadminuseralertdisplayed, "User is unable to add a new user");
 
 	}
 
@@ -54,25 +57,15 @@ public class AdminUserTest extends Base {
 		adminuser.clickOnSearchButton();
 		String adminusername = ExcelUtility.getStringData(0, 0, "AdminUserPage");
 		adminuser.enterUsernameOnUsernameFieldOfSearchButton(adminusername);
-		adminuser.clickOnSearchButtonOfSearchAdminUsers();
-	}
-
-	@Test(description = "Verify wheather user is able to serach and rest adminuser tile using usertype ")
-	public void verifywhetheruserisabletosearchadminusersfromadminusertileusingusertype() throws IOException {
-		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
-		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsernameonUsernameField(username);
-		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.clickOnRemembermeCheckbox();
-		loginPage.clickOnSignInButton();
-		AdminUserPage adminuser = new AdminUserPage(driver);
-		adminuser.clickOnAdminUserLink();
-		adminuser.clickOnSearchButton();
-		String adminusername = ExcelUtility.getStringData(1, 0, "AdminUserPage");
 		adminuser.selectUserTypeFromUserTypeDropDownlistOfSearchAdminUsers();
 		adminuser.clickOnSearchButtonOfSearchAdminUsers();
-		adminuser.clickOnReset();
+		String expected="Orange";
+		String actual=adminuser.getserachuser();
+		Assert.assertEquals(actual,expected,"User was unable to serach adminuser ");
+		
 	}
+
+	
+	
 
 }

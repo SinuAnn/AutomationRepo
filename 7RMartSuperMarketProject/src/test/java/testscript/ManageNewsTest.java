@@ -2,6 +2,7 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
@@ -26,6 +27,8 @@ public class ManageNewsTest extends Base {
 		String newnews = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
 		managenews.enterNewsonNewManageNewsField(newnews);
 		managenews.clickOnNewnewsSaveIcon();
+		boolean isnewnewsaddalertisdisplayed=managenews.addnewsalertdisplayed();
+		Assert.assertTrue(isnewnewsaddalertisdisplayed, "User is unable to add  new news");
 	}
 
 	@Test(description = "Verify wheather user is able to search news and reset in Managenews tile")
@@ -42,7 +45,8 @@ public class ManageNewsTest extends Base {
 		String newnews = ExcelUtility.getStringData(0, 0, "ManageNewsPage");
 		managenews.enterNewsOnManageNewsSearchField(newnews);
 		managenews.clickOnManageNewsSearchButton();
-		managenews.clickOnManageNewsResetIcon();
+		boolean issearchnewsdisplayed=managenews.serachmanagenews();
+		Assert.assertTrue(issearchnewsdisplayed, "User is unable to search news");
 
 	}
 

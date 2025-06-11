@@ -2,6 +2,7 @@ package testscript;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
@@ -22,5 +23,8 @@ public class HomeTest extends Base {
 		HomePage homepage = new HomePage(driver);
 		homepage.clickOnAdminLink();
 		homepage.clickOnLogoutLink();
+		boolean istitledisplayed=homepage.titledisplayed();
+		Assert.assertTrue(istitledisplayed, "User was unable to logout with vaild credentials");
+		
 	}
 }

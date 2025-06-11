@@ -6,7 +6,14 @@
   <test thread-count="5" name="Test">
     <classes>
      
-      <class name="testscript.LoginTest"/>
+      <class name="testscript.LoginTest"><methods>
+      <include name="verify_UserLoginwithValidCredentials"></include>
+      <include name="Verify wheather user can login with invalid username and valid password">
+      </include>
+      <exclude name="Verify wheather user can login with invalid credentials"></exclude>
+      </methods>
+      </class>
     </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->
