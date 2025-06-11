@@ -24,10 +24,11 @@ public class LoginTest extends Base {
 		loginPage.clickOnRemembermeCheckbox();
 		loginPage.clickOnSignInButton();
 boolean isdashboarddisplayed=loginPage.dashboardtiledisplayed();
-Assert.assertTrue(isdashboarddisplayed,Messages.VALIDCREDENTIALERROR);
-//String expected="Dashboard";
-//String actual=loginPage.getdashboardtext();
-//Assert.assertEquals(actual, expected,"User was unable to login with valid credentials");
+//Assert.assertTrue(isdashboarddisplayed,Messages.VALIDCREDENTIALERROR);
+String expected="Dashboard";
+String actual=loginPage.getDashboardText();
+Assert.assertEquals(actual, expected,Messages.VALIDCREDENTIALERROR);
+
 	}
 
 	@Test(description = "Verify wheather user can login with invalid username and valid password",priority=2)
@@ -40,10 +41,10 @@ Assert.assertTrue(isdashboarddisplayed,Messages.VALIDCREDENTIALERROR);
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUsernameonUsernameField(username);
 		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.clickOnRemembermeCheckbox();
+		//loginPage.clickOnRemembermeCheckbox();
 		loginPage.clickOnSignInButton();
-		boolean  isdashboarddisplayed=loginPage.dashboardtiledisplayed();
-		Assert.assertFalse(isdashboarddisplayed,Messages.INVALIDUSERNAMEANDVAILDPASSWORD);
+		boolean isalertdisplayed=loginPage.alertDisplayed();
+		Assert.assertTrue(isalertdisplayed,Messages.INVALIDUSERNAMEANDVAILDPASSWORDERROR);
 	}
 
 	@Test(description = "Verify wheather usercan login with valid username and invalid password",priority=3)
@@ -55,8 +56,9 @@ Assert.assertTrue(isdashboarddisplayed,Messages.VALIDCREDENTIALERROR);
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.clickOnRemembermeCheckbox();
 		loginPage.clickOnSignInButton();
-		boolean isalertdisplayed=loginPage.alertdisplayed();
-		Assert.assertTrue(isalertdisplayed, Messages.VALIDUSERNAMEANDINVAILDPASSWORD);
+		boolean  isalertdisplayed=loginPage.alertDisplayed();
+		//Assert.assertFalse(isdashboarddisplayed,Messages.VALIDUSERNAMEANDINVAILDPASSWORDERROR);
+		Assert.assertTrue(isalertdisplayed,Messages.VALIDUSERNAMEANDINVAILDPASSWORDERROR);
 	}
 
 	@Test(description = "Verify wheather user can login with invalid credentials",priority=4)
@@ -69,7 +71,7 @@ Assert.assertTrue(isdashboarddisplayed,Messages.VALIDCREDENTIALERROR);
 		loginPage.enterPasswordOnPasswordField(password);
 		loginPage.clickOnRemembermeCheckbox();
 		loginPage.clickOnSignInButton();
-		boolean  isalertdisplayed=loginPage.alertdisplayed();
+		boolean  isalertdisplayed=loginPage.alertDisplayed();
 		Assert.assertTrue(isalertdisplayed,Messages.INVALIDCREDENTIALERROR);
 	}
 

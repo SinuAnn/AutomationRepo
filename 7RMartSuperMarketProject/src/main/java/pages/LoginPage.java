@@ -23,8 +23,11 @@ public class LoginPage {
 	private WebElement remembermebutton;
 	@FindBy(xpath = "//button[text()='Sign In']")
 	private WebElement siginbutton;
-@FindBy(xpath="//p[text()='Dashboard']") WebElement dashboardtile;
-@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']") WebElement invaidcredentialalertmessage ;
+	@FindBy(xpath = "//p[text()='Dashboard']")private
+	WebElement dashboardtile;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")private
+	WebElement invaidcredentialalertmessage;
+
 	public void enterUsernameonUsernameField(String username) {
 		usernamefield.sendKeys(username);
 	}
@@ -40,17 +43,17 @@ public class LoginPage {
 	public void clickOnSignInButton() {
 		siginbutton.click();
 	}
-	public boolean dashboardtiledisplayed()
-	{
+
+	public boolean dashboardtiledisplayed() {
 		return dashboardtile.isDisplayed();
 	}
-	public String getdashboardtext()
-	{
+
+	public String getDashboardText() {
 		return dashboardtile.getText();
 	}
-	public boolean alertdisplayed()
-	{
+
+	public boolean alertDisplayed() {
 		return invaidcredentialalertmessage.isDisplayed();
 	}
-	
+
 }

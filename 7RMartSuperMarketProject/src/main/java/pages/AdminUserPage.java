@@ -35,10 +35,11 @@ public class AdminUserPage {
 	private WebElement findserach;
 	@FindBy(xpath = "//select[@id='ut']")
 	private WebElement findusertypefield;
-	@FindBy(xpath = "//i[@class='ace-icon fa fa-sync-alt']")
-	private WebElement resetfield;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement adminuseralert;
-	@FindBy(xpath="//table[contains(@class, 'table')]/tbody/tr/td[text()='Orange']")WebElement userserach;
+	
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	private WebElement adminuseralert;
+	@FindBy(xpath = "//table[@class='table table-bordered table-hover table-sm']//following::td[text()='Orange']")
+	private WebElement userserach;
 
 	public void clickOnAdminUserLink() {
 		adminuserlink.click();
@@ -88,21 +89,20 @@ public class AdminUserPage {
 	public void selectUserTypeFromUserTypeDropDownlistOfSearchAdminUsers() {
 
 		Select usertype = new Select(findusertypefield);
-		//usertype.selectByVisibleText("Staff");
+		// usertype.selectByVisibleText("Staff");
 		usertype.selectByIndex(1);
 	}
 
-	public void clickOnReset() {
-		resetfield.click();
+	
 
-	}
-	public boolean adminuseralertdisplayed()
-	{
+	
+
+	public boolean adminuserAlertDisplayed() {
 		return adminuseralert.isDisplayed();
 	}
-	public String getserachuser()
-	{
+
+	public String getSerachUser() {
 		return userserach.getText();
 	}
-	
+
 }

@@ -34,8 +34,8 @@ public class ManageCategoryTest extends Base {
 		managecategorypage.clickOnCheckBoxRadioButton();
 		managecategorypage.toPageScrolldown();
 		managecategorypage.clickonTheNewCategorySaveButton();
-		boolean isaddcategoryalertdisplayed=managecategorypage.addcategoryalertdisplayed();
-		Assert.assertTrue(isaddcategoryalertdisplayed, "User is unable to add a new category");
+		boolean isaddcategoryalertdisplayed=managecategorypage.addCategoryAlertDisplayed();
+		Assert.assertTrue(isaddcategoryalertdisplayed,Messages.ADDNEWCATEGORYERROR );
 	}
 
 	@Test(description = "Verify wheather user is able to search  categeory details  Managecategory tile")
@@ -53,8 +53,8 @@ public class ManageCategoryTest extends Base {
 		String newcategorysearchname = ExcelUtility.getStringData(0, 0, "ManageCategoryPage");
 		managecategorypage.enterCategoryNameOnCategorySearchField(newcategorysearchname);
 		managecategorypage.clickOnCategorySearchButton();
-		boolean issearchlistcategoryisdisplayed=managecategorypage.serachlistcategory();
-		Assert.assertTrue(issearchlistcategoryisdisplayed,"User is unable to find search list category");
+		boolean issearchlistcategoryisdisplayed=managecategorypage.serachListCategory();
+		Assert.assertTrue(issearchlistcategoryisdisplayed,Messages.CATEGORYSERACHERROR);
 	}
 
 }

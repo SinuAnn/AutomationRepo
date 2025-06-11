@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
+import constants.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -23,8 +24,8 @@ public class HomeTest extends Base {
 		HomePage homepage = new HomePage(driver);
 		homepage.clickOnAdminLink();
 		homepage.clickOnLogoutLink();
-		boolean istitledisplayed=homepage.titledisplayed();
-		Assert.assertTrue(istitledisplayed, "User was unable to logout with vaild credentials");
+		boolean istitledisplayed=homepage.titleDisplayed();
+		Assert.assertTrue(istitledisplayed,Messages.HOMEPAGEERROR);
 		
 	}
 }

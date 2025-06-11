@@ -29,8 +29,7 @@ public class ManageNewsPage {
 	WebElement managenewssearchfield;
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement managenewssearchbutton;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and@class='btn btn-rounded btn-warning']")
-	WebElement manangenewsreseticon;
+	
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement addnewsalert;
 	@FindBy(xpath="//h4[text()='Search Manage News']")private WebElement searchnews;
 	public void clickOnManageNewsLink() {
@@ -61,14 +60,11 @@ public class ManageNewsPage {
 		managenewssearchbutton.click();
 	}
 
-	public void clickOnManageNewsResetIcon() {
-		manangenewsreseticon.click();
-	}
-	public boolean addnewsalertdisplayed()
+	public boolean addNewsAlertDisplayed()
 	{
 		return addnewsalert.isDisplayed();
 }
-	public boolean serachmanagenews()
+	public boolean serachManageNews()
 	{
 		return searchnews.isDisplayed();
 	}

@@ -46,8 +46,7 @@ public class ManageCategoryPage {
 	private WebElement categorynamesearchfield;
 	@FindBy(xpath = "//button[@value='sr']")
 	private WebElement categorysearchbutton;
-	@FindBy(xpath = "//a[@class='btn btn-rounded btn-warning']")
-	private WebElement categryresetlink;
+	
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement addcategoryalert;
 @FindBy(xpath="//h4[text()='Search List Categories']")private WebElement searchlist;
 
@@ -103,14 +102,12 @@ public class ManageCategoryPage {
 		categorysearchbutton.click();
 	}
 
-	public void categryResetLink() {
-		categryresetlink.click();
-	}
-	public boolean addcategoryalertdisplayed()
+	
+	public boolean addCategoryAlertDisplayed()
 	{
 		return addcategoryalert.isDisplayed();
 }
-	public boolean serachlistcategory()
+	public boolean serachListCategory()
 	{
 		return searchlist.isDisplayed();
 	}

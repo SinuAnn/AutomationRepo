@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.Base;
+import constants.Messages;
 import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
@@ -38,8 +39,8 @@ public class AdminUserTest extends Base {
 		// String adminpassword = ExcelUtility.getStringData(0, 1, "AdminUserPage");
 		adminuser.selectUserTypeFromUserTypeDropDownList();
 		adminuser.clickOnSaveButton();
-		boolean isadminuseralertdisplayed=adminuser.adminuseralertdisplayed();
-	Assert.assertTrue(isadminuseralertdisplayed, "User is unable to add a new user");
+		boolean isadminuseralertdisplayed=adminuser.adminuserAlertDisplayed();
+	Assert.assertTrue(isadminuseralertdisplayed,Messages.ADDNEWADMINUSERERROR);
 
 	}
 
@@ -60,8 +61,8 @@ public class AdminUserTest extends Base {
 		adminuser.selectUserTypeFromUserTypeDropDownlistOfSearchAdminUsers();
 		adminuser.clickOnSearchButtonOfSearchAdminUsers();
 		String expected="Orange";
-		String actual=adminuser.getserachuser();
-		Assert.assertEquals(actual,expected,"User was unable to serach adminuser ");
+		String actual=adminuser.getSerachUser();
+		Assert.assertEquals(actual,expected,Messages.ADMINUSERSEARCHERROR);
 		
 	}
 
