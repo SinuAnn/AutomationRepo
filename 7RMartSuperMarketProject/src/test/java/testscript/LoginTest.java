@@ -15,7 +15,7 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
 	@Test(description = "Verify wheather  user can login with valid credentials",priority=1)
-	public void verify_UserLoginwithValidCredentials() throws IOException {
+	public void verifyUserLoginwithValidCredentials() throws IOException {
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage"); 
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
@@ -45,6 +45,7 @@ Assert.assertEquals(actual, expected,Messages.VALIDCREDENTIALERROR);
 		loginPage.clickOnSignInButton();
 		boolean isalertdisplayed=loginPage.alertDisplayed();
 		Assert.assertTrue(isalertdisplayed,Messages.INVALIDUSERNAMEANDVAILDPASSWORDERROR);
+		//Assert.assertFalse(isalertdisplayed,"  Not able to display alertmessages ");
 	}
 
 	@Test(description = "Verify wheather usercan login with valid username and invalid password",priority=3)
