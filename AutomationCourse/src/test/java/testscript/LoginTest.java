@@ -49,37 +49,6 @@ loginpage.enterpasswordonpasswordField(password);
 loginpage.clickonloginbutton();
 
 
-ublic class LoginPage {
-	public WebDriver driver;
-	 
-	public LoginPage(WebDriver driver)
-	{
-		this.driver=driver;
-		PageFactory.initElements(driver, this);
-		
-	}
-	@FindBy(xpath="//input[@placeholder='Username']")private WebElement usernamefield;
-	@FindBy(xpath="//input[@placeholder='Password']")private WebElement passwordkey;
-	@FindBy(xpath="//input[@id='remember']")private WebElement rememberme; 
-	@FindBy(xpath="//button[text()='Sign In']")private WebElement signin;
-	public void  enterUsernameonUsernameField(String username)
-	{
-		usernamefield.sendKeys(username);
-	}
-	public void  enterpasswordonpasswordField(String password)
-	{
-		passwordkey.sendKeys(password);
-	}
-	public void  clickonremembermecheckbox()
-	{
-		rememberme.click();
-	}
-	
-	public void  clickonsigninbutton()
-	{
-		signin.click();
-	}
-	}
 
 }
 

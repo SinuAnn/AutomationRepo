@@ -23,25 +23,29 @@ public class LoginPage {
 	private WebElement remembermebutton;
 	@FindBy(xpath = "//button[text()='Sign In']")
 	private WebElement siginbutton;
-	@FindBy(xpath = "//p[text()='Dashboard']")private
-	WebElement dashboardtile;
-	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")private
-	WebElement invaidcredentialalertmessage;
+	@FindBy(xpath = "//p[text()='Dashboard']")
+	private WebElement dashboardtile;
+	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
+	private WebElement invaidcredentialalertmessage;
 
-	public void enterUsernameonUsernameField(String username) {
+	public LoginPage enterUsernameonUsernameField(String username) {
 		usernamefield.sendKeys(username);
+		return this;
 	}
 
-	public void enterPasswordOnPasswordField(String password) {
+	public LoginPage enterPasswordOnPasswordField(String password) {
 		passwordkey.sendKeys(password);
+		return this;//
 	}
 
-	public void clickOnRemembermeCheckbox() {
+	public LoginPage clickOnRemembermeCheckbox() {
 		remembermebutton.click();
+		return this;
 	}
 
-	public void clickOnSignInButton() {
+	public HomePage clickOnSignInButton() {
 		siginbutton.click();
+		return new HomePage(driver);
 	}
 
 	public boolean dashboardtiledisplayed() {

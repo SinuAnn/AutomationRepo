@@ -14,16 +14,15 @@ import utilities.ExcelUtility;
 public class HomeTest extends Base {
 	@Test(description = "Verify wheather user is able to logout sucessfully")
 	public void verifywhetheruserisabletologoutsucessfully() throws IOException {
+		HomePage homepage;
 		String username = ExcelUtility.getStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(0, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.enterUsernameonUsernameField(username);
-		loginPage.enterPasswordOnPasswordField(password);
-		loginPage.clickOnRemembermeCheckbox();
-		loginPage.clickOnSignInButton();
-		HomePage homepage = new HomePage(driver);
+		loginPage.enterUsernameonUsernameField(username).enterPasswordOnPasswordField(password).clickOnRemembermeCheckbox();
+		homepage=loginPage.clickOnSignInButton();
+		
 		homepage.clickOnAdminLink();
-		homepage.clickOnLogoutLink();
+		loginPage=homepage.clickOnLogoutLink();
 		boolean istitledisplayed=homepage.titleDisplayed();
 		Assert.assertTrue(istitledisplayed,Messages.HOMEPAGEERROR);
 		

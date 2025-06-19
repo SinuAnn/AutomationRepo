@@ -15,8 +15,7 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = ("//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news'and@class='small-box-footer']"))
-	private WebElement manageNewsLink;
+	
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	WebElement newmanagenewsicon;
 	@FindBy(xpath = "//textarea[@id='news'and@class='form-control']")
@@ -32,32 +31,36 @@ public class ManageNewsPage {
 	
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement addnewsalert;
 	@FindBy(xpath="//h4[text()='Search Manage News']")private WebElement searchnews;
-	public void clickOnManageNewsLink() {
-		manageNewsLink.click();
-	}
+	
 
-	public void clickOnNewManageNewsIcon() {
+	public ManageNewsPage clickOnNewManageNewsIcon() {
 		newmanagenewsicon.click();
+		return this;
 	}
 
-	public void enterNewsonNewManageNewsField(String newnews) {
+	public  ManageNewsPage  enterNewsonNewManageNewsField(String newnews) {
 		newmanagenewsfield.sendKeys(newnews);
+		return this;
 	}
 
-	public void clickOnNewnewsSaveIcon() {
+	public  ManageNewsPage  clickOnNewnewsSaveIcon() {
 		newmanagenewssaveicon.click();
+		return this;
 	}
 
-	public void clickManageNewsSearchIcon() {
+	public  ManageNewsPage  clickManageNewsSearchIcon() {
 		managenewssearchicon.click();
+		return this;
 	}
 
-	public void enterNewsOnManageNewsSearchField(String news) {
+	public  ManageNewsPage  enterNewsOnManageNewsSearchField(String news) {
 		managenewssearchfield.sendKeys(news);
+		return this;
 	}
 
-	public void clickOnManageNewsSearchButton() {
+	public  ManageNewsPage  clickOnManageNewsSearchButton() {
 		managenewssearchbutton.click();
+		return this;
 	}
 
 	public boolean addNewsAlertDisplayed()

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import constants.Constant;
+import utilities.PageUtility;
 
 public class ManageCategoryPage {
 	public WebDriver driver;
@@ -23,8 +24,7 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category']")
-	private WebElement managecategorylink;
+	
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")
 	WebElement newcategoryaddicon;
 	@FindBy(xpath = "//input[@id='category'and@class='form-control']")
@@ -46,69 +46,77 @@ public class ManageCategoryPage {
 	private WebElement categorynamesearchfield;
 	@FindBy(xpath = "//button[@value='sr']")
 	private WebElement categorysearchbutton;
+
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible'or @class='alert alert-danger alert-dismissible']")
+	private WebElement addcategoryalert;
+	@FindBy(xpath = "//h4[text()='Search List Categories']")
+	private WebElement searchlist;
+
 	
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement addcategoryalert;
-@FindBy(xpath="//h4[text()='Search List Categories']")private WebElement searchlist;
+	
 
-	public void clickOnManageCategoryLink() {
-		managecategorylink.click();
-	}
-
-	public void clickOnNewCategoryAddIcon() {
+	public ManageCategoryPage clickOnNewCategoryAddIcon() {
 		newcategoryaddicon.click();
+		return this;
 	}
 
-	public void enterNewnameOnCategoryField(String categoryname) {
+	public ManageCategoryPage enterNewnameOnCategoryField(String categoryname) {
 		newcategoryfield.sendKeys(categoryname);
+		return this;
 	}
 
-	public void clickOnSelectGroupstoSelectGroup() {
+	public ManageCategoryPage clickOnSelectGroupstoSelectGroup() {
 
 		discount.click();
-
+		return this;
 	}
 
-	public void clickOnTheFileUploadLink() throws AWTException {
+	public ManageCategoryPage clickOnTheFileUploadLink() throws AWTException {
 
 		newcategoryfileuploadlink.sendKeys(Constant.IMAGEDATAFILE);
-
+		return this;
 	}
 
-	public void clickOnCheckBoxRadioButton() {
+	public ManageCategoryPage clickOnCheckBoxRadioButton()
+	{
 		checkboxmenu1.click();
 		checkboxmenu2.click();
+		return this;
 	}
 
-	public void toPageScrolldown() {
+	public ManageCategoryPage toPageScrolldown() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,600)", "");
+		return this;
 	}
 
-	public void clickonTheNewCategorySaveButton() {
+	public ManageCategoryPage clickonTheNewCategorySaveButton() {
 		// newcategorysavebutton.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", newcategorysavebutton);
+		return this;
 	}
 
-	public void clickonCategorySearchIcon() {
+	public ManageCategoryPage clickonCategorySearchIcon() {
 		categorysearchlink.click();
+		return this;
 	}
 
-	public void enterCategoryNameOnCategorySearchField(String categoryname) {
+	public ManageCategoryPage enterCategoryNameOnCategorySearchField(String categoryname) {
 		categorynamesearchfield.sendKeys(categoryname);
+		return this;
 	}
 
-	public void clickOnCategorySearchButton() {
+	public ManageCategoryPage clickOnCategorySearchButton() {
 		categorysearchbutton.click();
+		return this;
 	}
 
-	
-	public boolean addCategoryAlertDisplayed()
-	{
+	public boolean addCategoryAlertDisplayed() {
 		return addcategoryalert.isDisplayed();
-}
-	public boolean serachListCategory()
-	{
+	}
+
+	public boolean serachListCategory() {
 		return searchlist.isDisplayed();
 	}
 }
