@@ -38,20 +38,22 @@ public class PageUtility {
 		action.clickAndHold(element).build().perform();
 	}	
 	
-	public void dragAnddropAction (WebElement drag, WebElement drop)
+	public void dragAndDropAction (WebElement drag, WebElement drop)
 	{
 	Actions actions= new Actions(driver);
 	 actions.dragAndDrop(drag, drop).build().perform();
 	}
 	
-	public void deselectbyVisibleTextContains(WebElement element, String text)
-	{ 
-		Select object = new Select(element); 
-		object.deSelectByContainsVisibleText(text);;
+	public void selectCheckbox(WebElement checkbox) {
+	    if (!checkbox.isSelected()) {
+	        checkbox.click();
+	    }
 	}
-	public void selectbyContainsVisibleText(WebElement element, String text)
-	{ 
-		Select object = new Select(element); 
-		object.selectByContainsVisibleText(text);
+	public void selectRadioButton(WebElement radioButton) {
+	    if (!radioButton.isSelected()) {
+	        radioButton.click();
+	    }
 	}
+	
+	
 }
