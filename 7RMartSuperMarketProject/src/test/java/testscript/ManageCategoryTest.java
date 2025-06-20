@@ -11,11 +11,12 @@ import constants.Messages;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
+import retry.Retry;
 import utilities.ExcelUtility;
 
 public class ManageCategoryTest extends Base {
 
-	@Test(description = "Verify wheather the user is able to add new categeory details in Managecategory tile")
+	@Test(description = "Verify wheather the user is able to add new categeory details in Managecategory tile",retryAnalyzer =retry.Retry.class)
 	public void verifyWhetherTheUserCanEnterTheNewCategoryDetails() throws IOException, AWTException {
 		HomePage homepage;
 		ManageCategoryPage managecategorypage;

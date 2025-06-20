@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 2 failed,   9 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInValidCredentials">verifyUserLoginWithInValidCredentials</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.ManageCategoryTest" class="method navigator-link" hash-for-method="verifyWhetherTheUserCanEnterTheNewCategoryDetails">verifyWhetherTheUserCanEnterTheNewCategoryDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">13 methods,   13 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -120,6 +101,21 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInValidCredentials(admin, Admin)">verifyUserLoginWithInValidCredentials(admin, Admin)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInValidCredentials(test, test1)">verifyUserLoginWithInValidCredentials(test, test1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInValidCredentials(test1, test2)">verifyUserLoginWithInValidCredentials(test1, test2)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInValidUsernameandvalidpassword">verifyUserLoginWithInValidUsernameandvalidpassword</a> <!-- method navigator-link -->
@@ -133,6 +129,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testscript.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginwithValidCredentials">verifyUserLoginwithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscript.ManageCategoryTest" class="method navigator-link" hash-for-method="verifyWhetherTheUserCanEnterTheNewCategoryDetails">verifyWhetherTheUserCanEnterTheNewCategoryDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -177,67 +178,42 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testscript.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyUserLoginWithInValidCredentials">
-                  </a> <!-- verifyUserLoginWithInValidCredentials -->
-                  <span class="method-name">verifyUserLoginWithInValidCredentials</span>
-                  <div class="stack-trace">java.lang.RuntimeException: java.lang.IllegalStateException: Cannot get a NUMERIC value from a STRING cell
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: java.lang.IllegalStateException: Cannot get a NUMERIC value from a STRING cell
-	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:987)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getNumericCellValue(XSSFCell.java:260)
-	at utilities.ExcelUtility.getIntegerData(ExcelUtility.java:36)
-	at testscript.LoginTest.getDataFromDataProvider(LoginTest.java:75)
-	... 25 more
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify wheather user can login with invalid credentials)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testscript.ManageCategoryTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyWhetherTheUserCanEnterTheNewCategoryDetails">
-                  </a> <!-- verifyWhetherTheUserCanEnterTheNewCategoryDetails -->
-                  <span class="method-name">verifyWhetherTheUserCanEnterTheNewCategoryDetails</span>
-                  <div class="stack-trace">org.openqa.selenium.support.ui.UnexpectedTagNameException: Element should have been &quot;select&quot; but was &quot;input&quot;
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:44)
-	at utilities.PageUtility.selectbyValue(PageUtility.java:14)
-	at pages.ManageCategoryPage.clickOnCheckBoxRadioButton(ManageCategoryPage.java:82)
-	at testscript.ManageCategoryTest.verifyWhetherTheUserCanEnterTheNewCategoryDetails(ManageCategoryTest.java:32)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Verify wheather the user is able to add new categeory details in Managecategory tile)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">testscript.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInValidCredentials(admin, Admin)">
+                  </a> <!-- verifyUserLoginWithInValidCredentials(admin, Admin) -->
+                  <span class="method-name">verifyUserLoginWithInValidCredentials</span>
+                  <span class="parameters">(admin,Admin)</span>
+                  <em>
+(Verify wheather user can login with invalid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInValidCredentials(test, test1)">
+                  </a> <!-- verifyUserLoginWithInValidCredentials(test, test1) -->
+                  <span class="method-name">verifyUserLoginWithInValidCredentials</span>
+                  <span class="parameters">(test,test1)</span>
+                  <em>
+(Verify wheather user can login with invalid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInValidCredentials(test1, test2)">
+                  </a> <!-- verifyUserLoginWithInValidCredentials(test1, test2) -->
+                  <span class="method-name">verifyUserLoginWithInValidCredentials</span>
+                  <span class="parameters">(test1,test2)</span>
+                  <em>
+(Verify wheather user can login with invalid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="verifyUserLoginWithInValidUsernameandvalidpassword">
@@ -275,37 +251,20 @@ Driver info: driver.version: unknown
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyWhetherTheUserCanEnterTheNewCategoryDetails">
+                  </a> <!-- verifyWhetherTheUserCanEnterTheNewCategoryDetails -->
+                  <span class="method-name">verifyWhetherTheUserCanEnterTheNewCategoryDetails</span>
+                  <em>
+(Verify wheather the user is able to add new categeory details in Managecategory tile)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifywhetherUsercanSearchTheCategoryDetails">
                   </a> <!-- verifywhetherUsercanSearchTheCategoryDetails -->
                   <span class="method-name">verifywhetherUsercanSearchTheCategoryDetails</span>
                   <em>
 (Verify wheather user is able to search  categeory details  Managecategory tile)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testscript.ManageNewsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyWhethertheUsercanaddNewNews">
-                  </a> <!-- verifyWhethertheUsercanaddNewNews -->
-                  <span class="method-name">verifyWhethertheUsercanaddNewNews</span>
-                  <em>
-(Verify wheather user is able to add new news in Managenews tile)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifywhetherUserCanSearchNews">
-                  </a> <!-- verifywhetherUserCanSearchNews -->
-                  <span class="method-name">verifywhetherUserCanSearchNews</span>
-                  <em>
-(Verify wheather user is able to search news and reset in Managenews tile)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -332,6 +291,32 @@ Driver info: driver.version: unknown
                   <span class="method-name">verifywhetheruserisabletosearchadminusersfromadminusertileusingusername</span>
                   <em>
 (Verify wheather user is able to serach adminuser using username and userType )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testscript.ManageNewsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyWhethertheUsercanaddNewNews">
+                  </a> <!-- verifyWhethertheUsercanaddNewNews -->
+                  <span class="method-name">verifyWhethertheUsercanaddNewNews</span>
+                  <em>
+(Verify wheather user is able to add new news in Managenews tile)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifywhetherUserCanSearchNews">
+                  </a> <!-- verifywhetherUserCanSearchNews -->
+                  <span class="method-name">verifywhetherUserCanSearchNews</span>
+                  <em>
+(Verify wheather user is able to search news and reset in Managenews tile)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -422,56 +407,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(11);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyWhethertheUsercanaddNewNews')
-data.setCell(0, 2, 'testscript.ManageNewsTest')
-data.setCell(0, 3, 4848);
+data.setCell(0, 1, 'verifyWhetherUserIsAbleToAddNewAdminUserOnAdminUserTile')
+data.setCell(0, 2, 'testscript.AdminUserTest')
+data.setCell(0, 3, 5706);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyWhetherUserIsAbleToAddNewAdminUserOnAdminUserTile')
-data.setCell(1, 2, 'testscript.AdminUserTest')
-data.setCell(1, 3, 4677);
+data.setCell(1, 1, 'verifyWhetherTheUserCanEnterTheNewCategoryDetails')
+data.setCell(1, 2, 'testscript.ManageCategoryTest')
+data.setCell(1, 3, 5400);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyUserLoginwithValidCredentials')
 data.setCell(2, 2, 'testscript.LoginTest')
-data.setCell(2, 3, 4577);
+data.setCell(2, 3, 4840);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifywhetherUsercanSearchTheCategoryDetails')
-data.setCell(3, 2, 'testscript.ManageCategoryTest')
-data.setCell(3, 3, 3546);
+data.setCell(3, 1, 'verifyWhethertheUsercanaddNewNews')
+data.setCell(3, 2, 'testscript.ManageNewsTest')
+data.setCell(3, 3, 4565);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyWhetherTheUserCanEnterTheNewCategoryDetails')
-data.setCell(4, 2, 'testscript.ManageCategoryTest')
-data.setCell(4, 3, 3209);
+data.setCell(4, 1, 'verifywhetheruserisabletosearchadminusersfromadminusertileusingusername')
+data.setCell(4, 2, 'testscript.AdminUserTest')
+data.setCell(4, 3, 4080);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifywhetheruserisabletosearchadminusersfromadminusertileusingusername')
-data.setCell(5, 2, 'testscript.AdminUserTest')
-data.setCell(5, 3, 3201);
+data.setCell(5, 1, 'verifywhetherUserCanSearchNews')
+data.setCell(5, 2, 'testscript.ManageNewsTest')
+data.setCell(5, 3, 3957);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifywhetherUserCanSearchNews')
-data.setCell(6, 2, 'testscript.ManageNewsTest')
-data.setCell(6, 3, 2836);
+data.setCell(6, 1, 'verifywhetherUsercanSearchTheCategoryDetails')
+data.setCell(6, 2, 'testscript.ManageCategoryTest')
+data.setCell(6, 3, 3673);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifywhetheruserisabletologoutsucessfully')
 data.setCell(7, 2, 'testscript.HomeTest')
-data.setCell(7, 3, 2247);
+data.setCell(7, 3, 3120);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'verifyUserLoginWithInValidUsernameandvalidpassword')
 data.setCell(8, 2, 'testscript.LoginTest')
-data.setCell(8, 3, 1685);
+data.setCell(8, 3, 2063);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'verifyUserLoginWithValidUsernameandInValidPassword')
 data.setCell(9, 2, 'testscript.LoginTest')
-data.setCell(9, 3, 1193);
+data.setCell(9, 3, 1708);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifyUserLoginWithInValidCredentials')
 data.setCell(10, 2, 'testscript.LoginTest')
-data.setCell(10, 3, 0);
+data.setCell(10, 3, 1457);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'verifyUserLoginWithInValidCredentials')
+data.setCell(11, 2, 'testscript.LoginTest')
+data.setCell(11, 3, 1425);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'verifyUserLoginWithInValidCredentials')
+data.setCell(12, 2, 'testscript.LoginTest')
+data.setCell(12, 3, 1377);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -504,133 +497,167 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginwithValidCredentials</span>
-                <span class="method-start">11404 ms</span>
+                <span class="method-start">11377 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyUserLoginwithValidCredentials status=SUCCESS method=LoginTest.verifyUserLogin...)</span>
-                <span class="method-start">15987 ms</span>
+                <span class="method-start">16223 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">16572 ms</span>
+                <span class="method-start">17144 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginWithInValidUsernameandvalidpassword</span>
-                <span class="method-start">28057 ms</span>
+                <span class="method-start">21915 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithInValidUsernameandvalidpassword status=SUCCESS method=LoginTest....)</span>
-                <span class="method-start">29743 ms</span>
+                <span class="method-start">23981 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">30216 ms</span>
+                <span class="method-start">24617 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginWithValidUsernameandInValidPassword</span>
-                <span class="method-start">35627 ms</span>
+                <span class="method-start">29145 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithValidUsernameandInValidPassword status=SUCCESS method=LoginTest....)</span>
-                <span class="method-start">36827 ms</span>
+                <span class="method-start">30857 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrower(Chrome)</span>
+                <span class="method-start">31512 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInValidCredentials(test, test1)</span>
+                <span class="method-start">34959 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithInValidCredentials status=SUCCESS method=LoginTest.verifyUserLog...)</span>
+                <span class="method-start">36420 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrower(Chrome)</span>
+                <span class="method-start">37172 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInValidCredentials(test1, test2)</span>
+                <span class="method-start">40840 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithInValidCredentials status=SUCCESS method=LoginTest.verifyUserLog...)</span>
+                <span class="method-start">42221 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrower(Chrome)</span>
+                <span class="method-start">42723 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInValidCredentials(admin, Admin)</span>
+                <span class="method-start">46536 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuit([TestResult name=verifyUserLoginWithInValidCredentials status=SUCCESS method=LoginTest.verifyUserLog...)</span>
+                <span class="method-start">47967 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.HomeTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">37320 ms</span>
+                <span class="method-start">48530 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifywhetheruserisabletologoutsucessfully</span>
-                <span class="method-start">41978 ms</span>
+                <span class="method-start">53031 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifywhetheruserisabletologoutsucessfully status=SUCCESS method=HomeTest.verifywhe...)</span>
-                <span class="method-start">44228 ms</span>
+                <span class="method-start">56153 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.AdminUserTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">44765 ms</span>
+                <span class="method-start">56702 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyWhetherUserIsAbleToAddNewAdminUserOnAdminUserTile</span>
-                <span class="method-start">49395 ms</span>
+                <span class="method-start">61017 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyWhetherUserIsAbleToAddNewAdminUserOnAdminUserTile status=SUCCESS method=Admin...)</span>
-                <span class="method-start">54076 ms</span>
+                <span class="method-start">66731 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">54522 ms</span>
+                <span class="method-start">67416 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifywhetheruserisabletosearchadminusersfromadminusertileusingusername</span>
-                <span class="method-start">58911 ms</span>
+                <span class="method-start">72268 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifywhetheruserisabletosearchadminusersfromadminusertileusingusername status=SUCC...)</span>
-                <span class="method-start">62118 ms</span>
+                <span class="method-start">76352 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageCategoryTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">62618 ms</span>
+                <span class="method-start">76830 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyWhetherTheUserCanEnterTheNewCategoryDetails</span>
-                <span class="method-start">67739 ms</span>
+                <span class="method-start">80709 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">driverQuit([TestResult name=verifyWhetherTheUserCanEnterTheNewCategoryDetails status=FAILURE method=ManageCateg...)</span>
-                <span class="method-start">70957 ms</span>
+                <span class="method-name">driverQuit([TestResult name=verifyWhetherTheUserCanEnterTheNewCategoryDetails status=SUCCESS method=ManageCateg...)</span>
+                <span class="method-start">86111 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">71753 ms</span>
+                <span class="method-start">86617 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifywhetherUsercanSearchTheCategoryDetails</span>
-                <span class="method-start">76334 ms</span>
+                <span class="method-start">91442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifywhetherUsercanSearchTheCategoryDetails status=SUCCESS method=ManageCategoryTe...)</span>
-                <span class="method-start">79882 ms</span>
+                <span class="method-start">95117 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testscript.ManageNewsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">80610 ms</span>
+                <span class="method-start">95560 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyWhethertheUsercanaddNewNews</span>
-                <span class="method-start">88125 ms</span>
+                <span class="method-start">99427 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifyWhethertheUsercanaddNewNews status=SUCCESS method=ManageNewsTest.verifyWhethe...)</span>
-                <span class="method-start">92975 ms</span>
+                <span class="method-start">103994 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrower(Chrome)</span>
-                <span class="method-start">93423 ms</span>
+                <span class="method-start">104484 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifywhetherUserCanSearchNews</span>
-                <span class="method-start">99848 ms</span>
+                <span class="method-start">109412 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuit([TestResult name=verifywhetherUserCanSearchNews status=SUCCESS method=ManageNewsTest.verifywhetherUs...)</span>
-                <span class="method-start">102691 ms</span>
+                <span class="method-start">113372 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

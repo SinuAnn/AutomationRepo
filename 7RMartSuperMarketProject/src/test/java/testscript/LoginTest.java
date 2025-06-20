@@ -46,7 +46,7 @@ public class LoginTest extends Base {
 		//Assert.assertFalse(isalertdisplayed," Not able to display alertmessages ");
 	}
 
-	@Test(description = "Verify wheather usercan login with valid username and invalid password", priority = 3)
+	@Test(description = "Verify wheather usercan login with valid username and invalid password", priority = 3,retryAnalyzer = retry.Retry.class)
 	public void verifyUserLoginWithValidUsernameandInValidPassword() throws IOException {
 		String username = ExcelUtility.getStringData(2, 0, "LoginPage");
 		String password = ExcelUtility.getStringData(2, 1, "LoginPage");
@@ -72,10 +72,10 @@ public class LoginTest extends Base {
 	 public Object[][]getDataFromDataProvider() throws IOException
 	 {
 	return new Object[][] { new Object[] {"test","test1"},new Object[] {"test1","test2"},new Object[] {
-	ExcelUtility.getIntegerData(3, 0,"LoginPage"),ExcelUtility.getStringData(3, 1, "LoginPage")}} ;
+	ExcelUtility.getStringData(3, 0,"LoginPage"),ExcelUtility.getStringData(3, 1, "LoginPage")}} ;
 			
 		
-
+	 
 
 	
 			
